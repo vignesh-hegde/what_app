@@ -10,7 +10,7 @@
 <body>
 
     <SCRIPT LANGUAGE="JavaScript">
-        function testResults (form) {
+        function redirect (form) {
             window.location.href = "https://wa.me/91" + form.inputbox.value;
         }
     </SCRIPT>
@@ -18,12 +18,17 @@
 
 
     <div id="form-main">
+
+            <h1 style="text-align: center; font-weight: 300; color: #008b46; "> Whatsapp messages without saving number!</h1>
+            
+
         <div id="form-div">
+
           <form NAME="myform" ACTION="" METHOD="GET" >
 
               <input type="text"  NAME="inputbox" class="feedback-input"  placeholder="Phone Number"  >
                 
-              <input type="button" value="SEND" id="button-blue" NAME="button" Value="Click" onClick="testResults(this.form)" > 
+              <input type="button" value="SEND" id="button-blue" NAME="button" Value="Click" onClick="redirect(this.form)" > 
 
         </form>
         </div>
