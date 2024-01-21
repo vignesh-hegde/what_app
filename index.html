@@ -12,7 +12,7 @@
 
     <SCRIPT LANGUAGE="JavaScript">
         function redirect (form) {
-            window.location.href = "https://wa.me/91" + form.inputbox.value;
+            window.location.href = "https://wa.me/"+ form.c_code_inputbox.value + form.p_number_inputbox.value.substr(-10).split(" ").join("");;
         }
     </SCRIPT>
 
@@ -20,22 +20,33 @@
         <h1 style="text-align: center; font-weight: 300; color: #008b46; "> Whatsapp messages without saving number!</h1>
             
 		<ul style="text-align: center; list-style-type: none;">
-			<li>&#9989; Supports only Indian numbers.</li>
-			<li>&#10060; +919876543210 (No starting with 91).</li>
-			<li>&#10060; 09876543210 (No starting with 0).</li>
-			<li>&#10060; 987 654 3210 (No space).</li>
+			<!-- <li>&#9989; Supports only Indian numbers.</li> -->
+			<li>&#10060; +91 (No starting with +).</li>
+			<li>&#9989; 91 (Only country code)</li>
+			<!-- <li>&#10060; 09876543210 (No starting with 0).</li> -->
+			<!-- <li>&#10060; 987 654 3210 (No space).</li> -->
 			<li>&#9989; 9876543210</li>
 		</ul>
 
         <div id="form-div">
           <form NAME="myform" ACTION="" METHOD="GET" >
-              <input type="number"  NAME="inputbox" class="feedback-input"  placeholder="Phone Number"  >
+			<div class="form-cls">
+
+				<input type="number"  NAME="c_code_inputbox" class="feedback-input" value="91" placeholder="country code" style="width: 35%; margin-right: 5px; border-radius: 200px 0px 0px 200px;" >
+				
+				<input type="number"  NAME="p_number_inputbox" class="feedback-input"  placeholder="Phone Number" style="border-radius: 0px 200px 200px 0px;">
+			</div>
               <input type="button" value="SEND" id="button-blue" NAME="button" Value="Click" onClick="redirect(this.form)" > 
         </form>
         </div>
 </body>
 
 <style>
+.form-cls{
+	display: flex;
+	flex-direction: row;
+}
+
 #feedback-page{
 	text-align:center;
 }
@@ -60,6 +71,7 @@
   	margin-top:30px;
 	margin-left: -260px;
     border-radius: 20px;
+
 }
 
 .feedback-input {
@@ -116,5 +128,19 @@ textarea {
 		padding-right: 3%;
 	}
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 </style>
 </html>
