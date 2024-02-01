@@ -34,7 +34,7 @@
 
 				<input type="number"  NAME="c_code_inputbox" class="feedback-input" value="91" placeholder="country code" style="width: 35%; margin-right: 5px; border-radius: 200px 0px 0px 200px;" >
 				
-				<input type="number"  NAME="p_number_inputbox" class="feedback-input"  placeholder="Phone Number" style="border-radius: 0px 200px 200px 0px;">
+				<input type="text" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode <= 57"  NAME="p_number_inputbox" class="feedback-input"  placeholder="Phone Number" style="border-radius: 0px 200px 200px 0px;">
 			</div>
               <input type="button" value="SEND" id="button-blue" NAME="button" Value="Click" onClick="redirect(this.form)" > 
         </form>
